@@ -14,7 +14,7 @@
     "express": "^4.12.4",
     "install": "^0.1.8",
     "keyword-extractor": "0.0.12",
-    "mongoose": "4.0.1",
+    "mongoose": "4.1.9",
     "natural": "^0.2.1",
     "npm": "^2.7.5",
     "request": "^2.55.0",

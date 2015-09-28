@@ -9,8 +9,16 @@ var pageSchema = new Schema({
     owner			 : String,
     project			 : String,
     references		 : Number,
-    terms			 : [{ term : String, score   : Number }],
-    parsed			 : {  type : Date,   default : Date.now }
+    terms			 : [
+        {
+            term : String,
+            score   : Number
+        }
+    ],
+    parsed			 : {
+        type : Date,
+        default : Date.now
+    }
 });
 
 var Page = mongoose.model('page', pageSchema);

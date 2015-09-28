@@ -1,4 +1,4 @@
-var Queue = require("./node_modules/simplecrawler-queue-mongo/build/MongoQueue.js");
+var Queue = require("./../../node_modules/simplecrawler-queue-mongo/build/MongoQueue.js");
 var url = require('url');
 var natural = require('natural');
 var TfIdf = natural.TfIdf;
@@ -47,8 +47,6 @@ function project(path){
 }
 
 function calculateArity(bodyContent){
-    var polarity = 0;
-    var visitedNodes = 1;
 
     var polarities = [];
 

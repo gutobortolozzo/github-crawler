@@ -6,5 +6,5 @@ if (cluster.isMaster) {
 		cluster.fork();
 	
 } else {
-    require('./natural.js');
+    require('./src/crawler/natural.js');
 }

@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var mongoose = require("mongoose");
-var Page = require("./PageModel");
+var Page = require("./../crawler/PageModel");
 
 mongoose.connect("localhost/github");
 
