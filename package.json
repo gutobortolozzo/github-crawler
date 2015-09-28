@@ -21,8 +21,9 @@
     "retext": "^0.5.1",
     "retext-sentiment": "^0.4.0",
     "retext-visit": "^0.2.6",
-    "simplecrawler": "^0.3.10",
+    "simplecrawler": "^0.5.3",
     "simplecrawler-queue-mongo": "^0.1.8",
+    "underscore": "^1.8.3",
     "valid-url": "^1.0.9"
   }
 }
