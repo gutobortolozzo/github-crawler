@@ -79,7 +79,7 @@ function listQualifiedTfidf(bodyContent) {
     tfidf.addDocument(tokens);
 
     return tfidf.listTerms(0).slice(0, 100).filter(function (item) {
-        return item.term.length > 3;
+        return item.term.length > 2;
     }).slice(0, 10).map(function (item) {
         return {
             term: item.term,

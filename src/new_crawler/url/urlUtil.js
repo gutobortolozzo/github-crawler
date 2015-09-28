@@ -1,6 +1,7 @@
 var urlProcessor = require('url');
 
 function parse(url){
+
     var parsed = urlProcessor.parse(url);
 
     return {
@@ -25,9 +26,16 @@ blackListOwner.set('explore');
 blackListOwner.set('search');
 blackListOwner.set('followers');
 blackListOwner.set('following');
+blackListOwner.set('follow');
 blackListOwner.set('join');
+blackListOwner.set('joined');
 blackListOwner.set('login');
+blackListOwner.set('sign');
 blackListOwner.set('features');
+blackListOwner.set('pricing');
+blackListOwner.set('about');
+blackListOwner.set('contact');
+blackListOwner.set('integrations');
 blackListOwner.set();
 
 function blacklisted(projectOwner){
