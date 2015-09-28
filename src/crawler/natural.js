@@ -12,9 +12,9 @@ var sentiment = require('retext-sentiment');
 var mongoose = require("mongoose");
 var retext = new Retext().use(sentiment).use(visit);
 var request = require('request');
-var Page = require("./PageModel");
+var Page = require("./../model/PageModel");
 
-console.log = function(){}
+console.log = function(){};
 
 mongoose.connect("localhost/github");
 
