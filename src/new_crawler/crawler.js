@@ -12,16 +12,7 @@ crawler.maxDepth 		= 0;
 crawler.filterByDomain  = true; // restrict to github
 crawler.acceptCookies	= false;
 
-crawler.addFetchCondition(function(parsedURL) {
-    var path = parsedURL.path.toLocaleLowerCase();
-    return !(path.match(/\.pdf$/i) ||
-    path.match(/\.csv$/i) ||
-    path.match(/\.png$/i) ||
-    path.match(/\.jpg$/i) ||
-    path.match(/\.atom$/i) ||
-    path.match(/\.md$/i) ||
-    path.match(/\.xml$/i));
-});
+crawler.addFetchCondition(urlUtil.fetchCondition);
 
 var pageRepository = new PageRepository();
 
@@ -35,6 +26,7 @@ crawler.on("fetchcomplete", function(queueItem, responseBuffer, response){
     pageRepository.incrementReference(parsedUrl.owner, parsedUrl.project);
 
     var response = responseBuffer.toString('utf-8');
+
     var $ = cheerio.load(response);
     var bodyContent = $('body').text().toLowerCase().replace(/\s+/g, ' ');
 
@@ -46,7 +38,10 @@ crawler.on("fetchcomplete", function(queueItem, responseBuffer, response){
 
     pageRepository.setFrequency(parsedUrl.owner, parsedUrl.project, listOfFrequencies);
 
-    //pageRepository.print();
+    pageRepository.print();
+
+    console.log('#########', 'enqueued', crawler.queue.length, '##########');
+    console.log(queueItem.url);
 });
 
 crawler.on("complete",function() {

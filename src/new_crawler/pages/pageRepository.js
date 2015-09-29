@@ -49,7 +49,7 @@ function PageRepository(){
 
         var frequencies = project.frequencies.concat(listOfFrequencies);
 
-        var uniqueList = _.uniq(frequencies, function(item, key, a) {
+        var uniqueList = _.uniq(frequencies, function(item){
             return item.term;
         });
 

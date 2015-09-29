@@ -19,6 +19,19 @@ function project(path){
     return path.split("/")[2];
 }
 
+function fetchCondition(parsedURL) {
+    var path = parsedURL.path.toLocaleLowerCase();
+
+    var containsIssues = path.indexOf('issues') >= 0;
+    var containsPulls = path.indexOf('pulls') >= 0;
+
+    if(containsIssues || containsPulls) return true;
+
+    var formerPath = '/'+owner(path)+'/'+project(path);
+
+    return path == formerPath;
+}
+
 var blackListOwner = new Map();
 blackListOwner.set('showcases');
 blackListOwner.set('blog');
@@ -44,3 +57,4 @@ function blacklisted(projectOwner){
 
 module.exports.parse = parse;
 module.exports.blacklisted = blacklisted;
+module.exports.fetchCondition = fetchCondition;
