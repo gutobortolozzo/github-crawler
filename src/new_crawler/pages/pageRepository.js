@@ -70,7 +70,7 @@ function PageRepository(){
             next = values.next();
         }
 
-        console.log('######', 'visited', visited, '######');
+        console.log('##########', 'visited', visited, '##########');
     };
 
     var generateKey = function(owner, project){

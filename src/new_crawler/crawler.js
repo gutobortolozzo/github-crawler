@@ -6,8 +6,8 @@ var tdidf = require('./tfidf/tfidf');
 var cheerio = require('cheerio');
 
 crawler          		= Crawler.crawl("https://github.com/NaturalNode/natural");
-crawler.interval 		= 800;
-crawler.maxConcurrency  = 1;
+//crawler.interval 		= 800;
+//crawler.maxConcurrency  = 1;
 crawler.maxDepth 		= 0;
 crawler.filterByDomain  = true; // restrict to github
 crawler.acceptCookies	= false;
@@ -40,8 +40,7 @@ crawler.on("fetchcomplete", function(queueItem, responseBuffer, response){
 
     pageRepository.print();
 
-    console.log('#########', 'enqueued', crawler.queue.length, '##########');
-    console.log(queueItem.url);
+    console.log('##########', 'enqueued', crawler.queue.length, '##########');
 });
 
 crawler.on("complete",function() {
