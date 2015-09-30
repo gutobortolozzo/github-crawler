@@ -35,6 +35,8 @@ function fetchCondition(parsedURL) {
 var blackListOwner = new Map();
 blackListOwner.set('showcases');
 blackListOwner.set('blog');
+blackListOwner.set('assets');
+blackListOwner.set('articles');
 blackListOwner.set('explore');
 blackListOwner.set('search');
 blackListOwner.set('followers');
@@ -47,6 +49,9 @@ blackListOwner.set('sign');
 blackListOwner.set('features');
 blackListOwner.set('pricing');
 blackListOwner.set('about');
+blackListOwner.set('site');
+blackListOwner.set('terms');
+blackListOwner.set('privacy');
 blackListOwner.set('contact');
 blackListOwner.set('integrations');
 blackListOwner.set();

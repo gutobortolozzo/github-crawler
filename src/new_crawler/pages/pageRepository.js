@@ -16,18 +16,19 @@ function PageRepository(){
         projects.set(projectKey, {
             owner       : owner,
             name        : project,
-            references  : 0,
+            visits      : 0,
             sentiment   : 0,
-            frequencies : []
+            frequencies : [],
+            references  : 0
         });
     };
 
-    this.incrementReference = function(owner, project){
+    this.incrementVisits = function(owner, project){
         if(isInvalid(owner, project)) return;
 
         var projectKey = generateKey(owner, project);
 
-        projects.get(projectKey).references += 1;
+        projects.get(projectKey).visits += 1;
     };
 
     this.setSentimentIndex = function(owner, project, sentimentIndex){
@@ -56,6 +57,17 @@ function PageRepository(){
         project.frequencies = uniqueList.sort(function(a, b){
             return b.score - a.score;
         }).slice(0, 10);
+    };
+
+    this.setRankedReferences = function(owner, project, rankedReferences){
+        if(isInvalid(owner, project)) return;
+
+
+
+        rankedReferences.forEach(function(){
+
+        });
+
     };
 
     this.print = function(){
