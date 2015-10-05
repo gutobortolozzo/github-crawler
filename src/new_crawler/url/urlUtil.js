@@ -24,8 +24,9 @@ function fetchCondition(parsedURL) {
 
     var containsIssues = path.indexOf('issues') >= 0;
     var containsPulls = path.indexOf('pulls') >= 0;
+    var containsWiki = path.indexOf('wiki') >= 0;
 
-    if(containsIssues || containsPulls) return true;
+    if(containsIssues || containsPulls || containsWiki) return true;
 
     var formerPath = '/'+owner(path)+'/'+project(path);
 

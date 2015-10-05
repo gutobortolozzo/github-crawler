@@ -42,10 +42,10 @@ crawler.on("fetchcomplete", function(queueItem, responseBuffer, response){
 
     pageRepository.setRankedReferences(parsedUrl.owner, parsedUrl.project, rankedReferences);
 
-    //pageRepository.print();
-    //
-    //console.log('##########', 'enqueued', crawler.queue.length, '##########');
-    //console.log('##########', 'url', parsedUrl.pathname, '##########');
+    pageRepository.print();
+
+    console.log('##########', 'enqueued', crawler.queue.length, '##########');
+    console.log('##########', 'url', parsedUrl.pathname, '##########');
 });
 
 crawler.on("complete",function() {

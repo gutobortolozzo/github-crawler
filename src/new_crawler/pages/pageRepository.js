@@ -19,7 +19,8 @@ function PageRepository(){
             visits      : 0,
             sentiment   : 0,
             frequencies : [],
-            references  : 0
+            references  : 0,
+            referenced  : 0
         });
     };
 
@@ -38,7 +39,7 @@ function PageRepository(){
 
         var project = projects.get(projectKey);
 
-        project.sentiment = (project.sentiment + sentimentIndex) / project.references;
+        project.sentiment = (project.sentiment + sentimentIndex) / project.visits;
     };
 
     this.setFrequency = function(owner, project, listOfFrequencies){
@@ -60,14 +61,25 @@ function PageRepository(){
     };
 
     this.setRankedReferences = function(owner, project, rankedReferences){
+        var self = this;
+
         if(isInvalid(owner, project)) return;
 
+        var projectKey = generateKey(owner, project);
 
+        var project = projects.get(projectKey);
 
-        rankedReferences.forEach(function(){
+        rankedReferences.forEach(function(ranked){
+            self.addProject(ranked.owner, ranked.project);
 
+            var localProjectKey = generateKey(ranked.owner, ranked.project);
+
+            var project = projects.get(localProjectKey);
+
+            project.referenced += 1;
         });
 
+        project.references += rankedReferences.length;
     };
 
     this.print = function(){
@@ -78,6 +90,7 @@ function PageRepository(){
         var next = values.next();
 
         while(!!next.value){
+            if(next.value.frequencies.length == 0) return;
             console.log(next.value);
             next = values.next();
         }

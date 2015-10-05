@@ -22,7 +22,11 @@ function calculateRank(bodyContent, currentOwner, currentProject){
         return !urlUtil.blacklisted(parsed.owner) && !urlUtil.blacklisted(parsed.project);
     }).map(function(link){
         var parsed = urlUtil.parse(link.attribs.href);
-        return "/"+parsed.owner+"/"+parsed.project;
+
+        return {
+            owner   : parsed.owner,
+            project : parsed.project
+        };
     });
 
     return _.uniq(references);
