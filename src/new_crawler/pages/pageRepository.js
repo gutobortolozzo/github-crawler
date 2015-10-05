@@ -1,7 +1,7 @@
 var _ = require('underscore');
 
 function PageRepository(){
-
+    "use strict"
     var projects = new Map();
     var visited = 0;
 
@@ -87,13 +87,10 @@ function PageRepository(){
 
         var values = projects.values();
 
-        var next = values.next();
-
-        while(!!next.value){
-            if(next.value.frequencies.length == 0) return;
-            console.log(next.value);
-            next = values.next();
-        }
+        //for(let value of projects.values()){
+        //    if(value.frequencies.length == 0) continue;
+        //    console.log(value);
+        //}
 
         console.log('##########', 'visited', visited, '##########');
     };

@@ -16,6 +16,7 @@ function tfidf(bodyContent) {
     return tfidf.listTerms(0).slice(0, 100).filter(function (item) {
         return item.term.length > 2 && !urlUtil.blacklisted(item.term);
     }).slice(0, 30).map(function (item) {
+        //natural.PorterStemmer.stem(item.term)
         return {
             term: item.term,
             score: (item.tfidf).toFixed(3)
