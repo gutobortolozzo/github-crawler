@@ -7,7 +7,7 @@ describe('rank', function () {
     const content = "<!DOCTYPE html>"+
         "<html>"+
         "<body>"+
-            "<p><a href=\"http://www.github.com.com/test/test\">Visit our HTML tutorial</a></p>"+
+            "<p><a href=\"https://www.github.com/test/test\">Magic test project</a></p>"+
         "</body>"+
         "</html>";
 
@@ -22,7 +22,7 @@ describe('rank', function () {
         ranking.pop().should.have.properties({
             owner   : "test",
             project : "test"
-        })
+        });
     });
 
     it('extracted none referenced project since owner/project is the same', function () {
