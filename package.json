@@ -4,11 +4,14 @@
   "description": "crawler the web",
   "main": "index.js",
   "scripts": {
-    "test": "start"
+    "test": "mocha test/ --recursive"
   },
   "author": "Guto Bortolozzo <gutobortolozzo@gmail.com> (https://github.com/gutobortolozzo/)",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "should": "^7.1.0"
+  },
   "dependencies": {
     "cheerio": "^0.19.0",
     "express": "^4.12.4",
