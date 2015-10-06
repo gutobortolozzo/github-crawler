@@ -7,15 +7,15 @@ describe('rank', function () {
     const content = "<!DOCTYPE html>"+
         "<html>"+
         "<body>"+
-            "<p><a href=\"https://www.github.com/test/test\">Magic test project</a></p>"+
+        "<p><a href=\"https://www.github.com/test/test\">Magic test project</a></p>"+
         "</body>"+
         "</html>";
 
-    it('extracted one referenced project', function () {
+    it('extracted one referenced project', () => {
         rank.calculateRank(content, "crawler", "crawler").length.should.be.eql(1);
     });
 
-    it('extracted one referenced project and check owner/project', function () {
+    it('extracted one referenced project and check owner/project',() => {
         var ranking = rank.calculateRank(content, "crawler", "crawler");
 
         ranking.length.should.be.eql(1);
@@ -25,7 +25,7 @@ describe('rank', function () {
         });
     });
 
-    it('extracted none referenced project since owner/project is the same', function () {
+    it('extracted none referenced project since owner/project is the same', () => {
         rank.calculateRank(content, "test", "test").length.should.be.eql(0);
     });
 });
