@@ -21,7 +21,7 @@ function tfidf(bodyContent) {
             term: item.term,
             score: (item.tfidf).toFixed(3)
         }
-    });
+    })
 }
 
 module.exports = tfidf;
