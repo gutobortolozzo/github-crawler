@@ -1,7 +1,9 @@
 var _ = require('underscore');
+var PouchDB = require('pouchdb');
 
+"use strict"
 function PageRepository(){
-    "use strict"
+    
     var projects = new Map();
     var visited = 0;
 
