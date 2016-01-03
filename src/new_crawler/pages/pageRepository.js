@@ -89,10 +89,14 @@ function PageRepository(){
 
         var values = projects.values();
 
-        //for(let value of projects.values()){
-        //    if(value.frequencies.length == 0) continue;
-        //    console.log(value);
-        //}
+        for(value of projects.values()){
+            if(value.frequencies.length == 0) continue;
+            console.log(value.owner);
+            console.log(value.name);
+            console.log(value.visits);
+            console.log(value.sentiment);
+            console.log('##################');
+        }
 
         console.log('##########', 'visited', visited, '##########');
     };
