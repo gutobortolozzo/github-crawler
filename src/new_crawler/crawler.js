@@ -1,10 +1,11 @@
-var Crawler = require("simplecrawler");
-var urlUtil = require('./url/urlUtil');
-var PageRepository = require('./pages/pageRepository');
-var calculateSentiment = require('./sentiment/sentiment');
-var tdidf = require('./tfidf/tfidf');
-var cheerio = require('cheerio');
-var rank = require('./rank/rank');
+const Crawler = require("simplecrawler");
+const urlUtil = require('./url/urlUtil');
+const PageRepository = require('./pages/pageRepository');
+const calculateSentiment = require('./sentiment/sentiment');
+const tdidf = require('./tfidf/tfidf');
+const cheerio = require('cheerio');
+const rank = require('./rank/rank');
+const stargazers = require('./stargazer/stargazer');
 
 crawler          		= Crawler.crawl("https://github.com/NaturalNode/natural");
 crawler.maxDepth 		= 0;
@@ -21,31 +22,48 @@ crawler.on("fetchcomplete", function(queueItem, responseBuffer, response){
 
     if(urlUtil.blacklisted(parsedUrl.owner)) return;
 
-    pageRepository.addProject(parsedUrl.owner, parsedUrl.project);
-    pageRepository.incrementVisits(parsedUrl.owner, parsedUrl.project);
+    var finishEvent = this.wait();
 
     var response = responseBuffer.toString('utf-8');
-
     var $ = cheerio.load(response);
-    var bodyContentAsHtml = $('body').html();
-    var bodyContentAsText = $('body').text().toLowerCase().replace(/\s+/g, ' ');
 
-    var sentimentIndex = calculateSentiment(bodyContentAsText);
+    pageRepository.addProject(parsedUrl.owner, parsedUrl.project)
+    .then(() => {
+        return pageRepository.incrementVisits(parsedUrl.owner, parsedUrl.project);
+    })
+    .then(() => {
+        var bodyContentAsText = $('body').text().toLowerCase().replace(/\s+/g, ' ');
 
-    pageRepository.setSentimentIndex(parsedUrl.owner, parsedUrl.project, sentimentIndex);
+        var sentimentIndex = calculateSentiment(bodyContentAsText);
 
-    var listOfFrequencies = tdidf(bodyContentAsText);
+        return pageRepository.setSentimentIndex(parsedUrl.owner, parsedUrl.project, sentimentIndex);
+    })
+    .then(() => {
+        var bodyContentAsText = $('body').text().toLowerCase().replace(/\s+/g, ' ');
+        var listOfFrequencies = tdidf(bodyContentAsText);
 
-    pageRepository.setFrequency(parsedUrl.owner, parsedUrl.project, listOfFrequencies);
+        return pageRepository.setFrequency(parsedUrl.owner, parsedUrl.project, listOfFrequencies);
+    })
+    .then(() => {
+        var bodyContentAsHtml = $('body').html();
+        var rankedReferences = rank.calculateRank(bodyContentAsHtml, parsedUrl.owner, parsedUrl.project);
 
-    var rankedReferences = rank.calculateRank(bodyContentAsHtml, parsedUrl.owner, parsedUrl.project);
-
-    pageRepository.setRankedReferences(parsedUrl.owner, parsedUrl.project, rankedReferences);
-
-    pageRepository.print();
-
-    console.log('##########', 'enqueued', crawler.queue.length, '##########');
-    console.log('##########', 'url', parsedUrl.pathname, '##########');
+        return pageRepository.setRankedReferences(parsedUrl.owner, parsedUrl.project, rankedReferences);
+    })
+    .then(() => {
+         var social = stargazers.social($);
+         return pageRepository.setSocial(parsedUrl.owner, parsedUrl.project, social);
+    })
+    .then(() => {
+        pageRepository.print();
+        console.log('##########', 'enqueued', crawler.queue.length, '##########');
+        console.log('##########', 'url', parsedUrl.pathname, '##########');
+        finishEvent();
+    })
+    .catch((error) => {
+        console.log(error);
+        finishEvent();
+    })
 });
 
 crawler.on("complete",function() {

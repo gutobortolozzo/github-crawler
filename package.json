@@ -4,7 +4,8 @@
   "description": "crawler the web",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/ --recursive"
+    "test": "mocha test/ --recursive",
+    "start": "curl -XDELETE 'http://localhost:9200/github/' && node src/new_crawler/crawler.js"
   },
   "author": "Guto Bortolozzo <gutobortolozzo@gmail.com> (https://github.com/gutobortolozzo/)",
   "license": "ISC",
@@ -13,7 +14,7 @@
     "should": "^7.1.0"
   },
   "dependencies": {
-    "cheerio": "^0.19.0",
+    "cheerio": "0.19.0",
     "elasticsearch": "^10.0.1",
     "express": "^4.12.4",
     "install": "^0.1.8",

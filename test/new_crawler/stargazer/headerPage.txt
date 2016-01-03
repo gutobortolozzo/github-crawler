@@ -1,0 +1,1351 @@
+<html lang="en" class=" is-copy-enabled is-u2f-enabled"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    
+    
+    <title>elastic/elasticsearch-js</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site"><meta content="summary" name="twitter:card"><meta content="elastic/elasticsearch-js" name="twitter:title"><meta content="elasticsearch-js - Official Elasticsearch client library for Node.js and the browser" name="twitter:description"><meta content="https://avatars0.githubusercontent.com/u/6764390?v=3&amp;s=400" name="twitter:image:src">
+      <meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="https://avatars0.githubusercontent.com/u/6764390?v=3&amp;s=400" property="og:image"><meta content="elastic/elasticsearch-js" property="og:title"><meta content="https://github.com/elastic/elasticsearch-js" property="og:url"><meta content="elasticsearch-js - Official Elasticsearch client library for Node.js and the browser" property="og:description">
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/NjgxMTc2OTplOTA0NWRiMjFhNWU3OTM3ZWM0MTdiYjY2NTFkMmQ2MTpmNTE5OTg5MzJhZmNjZmY3MmZhNmQxODZhYTdmYWI3NDAwNDIyMWU3OWM1NWRhZjA0NDA4NjUxNDZjNDhiMDFl--d6c7d6ef0a2799516220923cdcff4f59b9867102">
+    <meta name="pjax-timeout" content="1000">
+    <link rel="sudo-modal" href="/sessions/sudo_modal">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient="">
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host"><meta content="github" name="octolytics-app-id"><meta content="B1286341:691D:6980CBE:56898D5F" name="octolytics-dimension-request_id"><meta content="6811769" name="octolytics-actor-id"><meta content="gutobortolozzo" name="octolytics-actor-login"><meta content="b13ee70ceac86fdd93e44611435fc9cceaee456fec31226e30408232e74c7f31" name="octolytics-actor-hash">
+<meta content="/<user-name>/<repo-name>" data-pjax-transient="true" name="analytics-location">
+<meta content="Rails, view, files#disambiguate" data-pjax-transient="true" name="analytics-event">
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="gutobortolozzo">
+
+        <meta name="expected-hostname" content="github.com">
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta content="5c6baad79e2785f1d41bf250c5069a32f8d15b0d" name="form-nonce">
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-533f899df1b28bb13a4f60766edadaa22c930270e720f58bdd97ab1fac3a174f.css" integrity="sha256-Uz+JnfGyi7E6T2B2btraoiyTAnDnIPWL3ZerH6w6F08=" media="all" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2-692b0b1ba861c5b4055d33b157feb7f5b35ce646135cd0db80ce5d0b2293500d.css" integrity="sha256-aSsLG6hhxbQFXTOxV/639bNc5kYTXNDbgM5dCyKTUA0=" media="all" rel="stylesheet">
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="43506fe51b2c726e05d5d7ecaa73d097">
+
+      
+  <meta name="description" content="elasticsearch-js - Official Elasticsearch client library for Node.js and the browser">
+  <meta name="go-import" content="github.com/elastic/elasticsearch-js git https://github.com/elastic/elasticsearch-js.git">
+
+  <meta content="6764390" name="octolytics-dimension-user_id"><meta content="elastic" name="octolytics-dimension-user_login"><meta content="10854028" name="octolytics-dimension-repository_id"><meta content="elastic/elasticsearch-js" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="10854028" name="octolytics-dimension-repository_network_root_id"><meta content="elastic/elasticsearch-js" name="octolytics-dimension-repository_network_root_nwo">
+  <link href="https://github.com/elastic/elasticsearch-js/commits/master.atom" rel="alternate" title="Recent Commits to elasticsearch-js:master" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_in   env-production macintosh vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+      <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <span class="mega-octicon octicon-mark-github "></span>
+</a>
+
+
+      <div class="site-search repo-scope js-site-search" role="search">
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/elastic/elasticsearch-js/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/elastic/elasticsearch-js/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+  <label class="js-chromeless-input-container form-control">
+    <div class="scope-badge">This repository</div>
+    <input type="text" class="js-site-search-focus js-site-search-field is-clearable chromeless-input" data-hotkey="s" name="q" placeholder="Search" aria-label="Search this repository" data-global-scope-placeholder="Search GitHub" data-repo-scope-placeholder="Search" tabindex="1" autocapitalize="off">
+  </label>
+</form>
+      </div>
+
+      <ul class="header-nav left" role="navigation">
+        <li class="header-nav-item">
+          <a href="/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item">
+      <span class="js-socket-channel js-updatable-content" data-channel="notification-changed:gutobortolozzo" data-url="/notifications/header">
+      <a href="/notifications" aria-label="You have unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:unread" data-hotkey="g n">
+          <span class="mail-status unread"></span>
+          <span class="octicon octicon-bell "></span>
+</a>  </span>
+
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new" aria-label="Create new…" data-ga-click="Header, create new, icon:add">
+      <span class="octicon octicon-plus left"></span>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+
+  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="elastic/elasticsearch-js">This repository</span>
+  </div>
+    <a class="dropdown-item" href="/elastic/elasticsearch-js/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="/gutobortolozzo" aria-label="View profile and more" data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@gutobortolozzo" class="avatar" height="20" src="https://avatars1.githubusercontent.com/u/6811769?v=3&amp;s=40" width="20">
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu  dropdown-menu-sw">
+        <div class=" dropdown-header header-nav-current-user css-truncate">
+            Signed in as <strong class="css-truncate-target">gutobortolozzo</strong>
+
+        </div>
+
+
+        <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/gutobortolozzo" data-ga-click="Header, go to profile, text:your profile">
+            Your profile
+          </a>
+        <a class="dropdown-item" href="/stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+        <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
+          Explore
+        </a>
+          <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+            Settings
+          </a>
+
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="5c6baad79e2785f1d41bf250c5069a32f8d15b0d" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="ETylDVCjsjw0481vkIqpijQRALnLvHAm+V6djXLey6CxkEkCaQGoIFPvkiMl8hLGETdO91IjEsRCQPZVCQ3/Zg=="></div>
+            <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+              Sign out
+            </button>
+</form>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+    
+  </div>
+</div>
+
+      
+
+      
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope="" itemtype="http://schema.org/WebPage">
+    <div id="js-repo-pjax-container" class="context-loader-container js-repo-nav-next" data-pjax-container="">
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="5c6baad79e2785f1d41bf250c5069a32f8d15b0d" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="p4nk4sfjGcmpRfcIY+xfqmXug4MfpSEbFPW5pXl2AndMP9p0yq19lbGNe8d8un6OGCpoC/z5RyfQBkGlbK1eXw=="></div>      <input id="repository_id" name="repository_id" type="hidden" value="10854028">
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="/elastic/elasticsearch-js/subscription" class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true" data-ga-click="Repository, click Watch settings, action:files#disambiguate">
+            <span class="js-select-button">
+              <span class="octicon octicon-eye "></span>
+              Watch
+            </span>
+          </a>
+          <a class="social-count js-social-count" href="/elastic/elasticsearch-js/watchers">
+            71
+          </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header">
+              <span aria-label="Close" class="octicon octicon-x js-menu-close" role="button"></span>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <span class="select-menu-item-icon octicon octicon-check"></span>
+                  <div class="select-menu-item-text">
+                    <input checked="checked" id="do_included" name="do" type="radio" value="included">
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <span class="octicon octicon-eye"></span>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+                  <div class="select-menu-item-text">
+                    <input id="do_subscribed" name="do" type="radio" value="subscribed">
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <span class="octicon octicon-eye"></span>
+                      Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <span class="select-menu-item-icon octicon octicon-check"></span>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" type="radio" value="ignore">
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <span class="octicon octicon-mute"></span>
+                      Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/elastic/elasticsearch-js/unstar" class="js-toggler-form starred js-unstar-button" data-form-nonce="5c6baad79e2785f1d41bf250c5069a32f8d15b0d" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="ic+dIgquxvwPCEupRSnTPdO6ajfLXkT+mmKqNmW6n88hrWDM8Ddwn3zoMwdBtREf2pwjUSH4LZKwprvoQ/211Q=="></div>
+      <button class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar elastic/elasticsearch-js" data-ga-click="Repository, click unstar button, action:files#disambiguate; text:Unstar">
+        <span class="octicon octicon-star "></span>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/elastic/elasticsearch-js/stargazers">
+          1,046
+        </a>
+</form>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/elastic/elasticsearch-js/star" class="js-toggler-form unstarred js-star-button" data-form-nonce="5c6baad79e2785f1d41bf250c5069a32f8d15b0d" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="EMdy/Hjwcp+ok/dCMk6l56CFJAzfjdV/VBuo+W56mIScLW+IYRmsducLDgcLD6u/FL8odicYNpFbtIphipoFvw=="></div>
+      <button class="btn btn-sm btn-with-count js-toggler-target" aria-label="Star this repository" title="Star elastic/elasticsearch-js" data-ga-click="Repository, click star button, action:files#disambiguate; text:Star">
+        <span class="octicon octicon-star "></span>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/elastic/elasticsearch-js/stargazers">
+          1,046
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <a href="#fork-destination-box" class="btn btn-sm btn-with-count" title="Fork your own copy of elastic/elasticsearch-js to your account" aria-label="Fork your own copy of elastic/elasticsearch-js to your account" rel="facebox" data-ga-click="Repository, show fork modal, action:files#disambiguate; text:Fork">
+              <span class="octicon octicon-repo-forked "></span>
+            Fork
+          </a>
+
+          <div id="fork-destination-box" style="display: none;">
+            <h2 class="facebox-header" data-facebox-id="facebox-header">Where should we fork this repository?</h2>
+            <include-fragment src="" class="js-fork-select-fragment fork-select-fragment" data-url="/elastic/elasticsearch-js/fork?fragment=1">
+              <img alt="Loading" height="64" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" width="64">
+            </include-fragment>
+          </div>
+
+    <a href="/elastic/elasticsearch-js/network" class="social-count">
+      177
+    </a>
+  </li>
+</ul>
+
+    <h1 itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public ">
+  <span class="octicon octicon-repo "></span>
+  <span class="author"><a href="/elastic" class="url fn" itemprop="url" rel="author"><span itemprop="title">elastic</span></a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong><a href="/elastic/elasticsearch-js" data-pjax="#js-repo-pjax-container">elasticsearch-js</a></strong>
+
+  <span class="page-context-loader">
+    <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+  </span>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax js-octicon-loaders" role="navigation" data-pjax="#js-repo-pjax-container">
+
+  <a href="/elastic/elasticsearch-js" aria-label="Code" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /elastic/elasticsearch-js">
+    <span class="octicon octicon-code "></span>
+    Code
+</a>
+    <a href="/elastic/elasticsearch-js/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /elastic/elasticsearch-js/issues">
+      <span class="octicon octicon-issue-opened "></span>
+      Issues
+      <span class="counter">54</span>
+</a>
+  <a href="/elastic/elasticsearch-js/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /elastic/elasticsearch-js/pulls">
+    <span class="octicon octicon-git-pull-request "></span>
+    Pull requests
+    <span class="counter">1</span>
+</a>
+
+  <a href="/elastic/elasticsearch-js/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /elastic/elasticsearch-js/pulse">
+    <span class="octicon octicon-pulse "></span>
+    Pulse
+</a>
+  <a href="/elastic/elasticsearch-js/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /elastic/elasticsearch-js/graphs">
+    <span class="octicon octicon-graph "></span>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+<div class="repository-meta js-details-container">
+  <span class="repository-meta-content">
+        Official Elasticsearch client library for Node.js and the browser
+        <a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html" rel="nofollow">https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html</a>
+  </span>
+
+</div>
+
+
+<div class="overall-summary overall-summary-bottomless">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax="" href="/elastic/elasticsearch-js/commits/master">
+            <span class="octicon octicon-history "></span>
+            <span class="num text-emphasized">
+              932
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax="" href="/elastic/elasticsearch-js/branches">
+          <span class="octicon octicon-git-branch "></span>
+          <span class="num text-emphasized">
+            15
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax="" href="/elastic/elasticsearch-js/releases">
+          <span class="octicon octicon-tag "></span>
+          <span class="num text-emphasized">
+            19
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="/elastic/elasticsearch-js/graphs/contributors">
+    <span class="octicon octicon-organization "></span>
+    <span class="num text-emphasized">
+      49
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/elastic/elasticsearch-js/search?l=javascript">
+                <span class="color-block language-color" style="background-color:#f1e05a;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">99.8%</span>
+              </a>
+          </li>
+          <li>
+              <span class="other">
+                <span class="color-block language-color" style="background-color:#ededed;"></span>
+                <span class="lang">Other</span>
+                <span class="percent">0.2%</span>
+              </span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details">
+    <span class="language-color" aria-label="JavaScript 99.8%" style="width:99.8%; background-color:#f1e05a;" itemprop="keywords">JavaScript</span>
+    <span class="language-color" aria-label="Other 0.2%" style="width:0.2%; background-color:#ededed;" itemprop="keywords">Other</span>
+  </div>
+
+
+
+<div class="file-navigation in-mid-page file-navigation-new">
+  <div class="right">
+    <div class="btn-group">
+      
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/elastic/elasticsearch-js/new/master" class="button_to js-new-blob-form" data-form-nonce="5c6baad79e2785f1d41bf250c5069a32f8d15b0d" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="9nuMezSqNzUeR8p5QnjwCkwa5z+H6PjVQWYqVzIC59C5qpqYWg5HB8GQxN3WtyByaUXE8f5f0bjXav69W0r2Hw=="></div>
+    <button class="btn btn-sm tooltipped tooltipped-n js-new-blob-submit" type="submit" data-disable-with="working…" aria-label="Fork this project and create a new file">
+      New file
+    </button>
+</form>
+
+
+      <a href="/elastic/elasticsearch-js/find/master" class="btn btn-sm empty-icon right js-show-file-finder" data-pjax="" data-hotkey="t" data-ga-click="Repository, find file, location:repo overview">
+        Find file
+      </a>
+    </div>
+      <div class="file-navigation-options" data-multiple="">
+
+        <div class="file-navigation-option">
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol" class="js-set-user-protocol-preference" data-form-nonce="5c6baad79e2785f1d41bf250c5069a32f8d15b0d" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="iXxxCyLPagGYmwVLyAk+PHlcYFOtSEKOdL/ndL9L/bthJR492HUq3LjBatb7jDheftmKWAoIABS0prQdDCp2gg=="></div>
+            <input type="hidden" name="protocol_type" value="clone">
+
+            <div class="select-menu js-menu-container js-select-menu">
+              <div class="input-group js-select-button js-zeroclipboard-container">
+                <div class="input-group-button">
+  <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone HTTPS, location:repo overview">
+    HTTPS
+  </button>
+</div>
+<input type="text" class="input-monospace input-mini js-zeroclipboard-target js-url-field" value="https://github.com/elastic/elasticsearch-js.git" readonly="">
+<div class="input-group-button">
+  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy "></span></button>
+</div>
+
+              </div>
+
+              <div class="select-menu-modal-holder">
+                <div class="select-menu-modal js-menu-content" aria-hidden="true">
+                  <div class="select-menu-header">
+                    <span aria-label="Close" class="octicon octicon-x js-menu-close" role="button"></span>
+                    <span class="select-menu-title">Choose a clone URL</span>
+                  </div>
+
+                  <div class="select-menu-list js-navigation-container" role="menu">
+                      <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                        <span class="select-menu-item-icon octicon octicon-check"></span>
+                        <div class="select-menu-item-text">
+                          <input type="radio" name="protocol_selector" value="http" checked="">
+                          <span class="select-menu-item-heading">
+                            HTTPS
+                            (recommended)
+                          </span>
+                            <span class="description">
+                              Clone with Git or checkout with SVN using the repository's web address.
+                            </span>
+                          <span class="js-select-button-text hidden-select-button-text">
+                            <div class="input-group-button">
+  <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone HTTPS, location:repo overview">
+    HTTPS
+  </button>
+</div>
+<input type="text" class="input-monospace input-mini js-zeroclipboard-target js-url-field" value="https://github.com/elastic/elasticsearch-js.git" readonly="">
+<div class="input-group-button">
+  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy "></span></button>
+</div>
+
+                          </span>
+                        </div>
+                      </div>
+                      <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                        <span class="select-menu-item-icon octicon octicon-check"></span>
+                        <div class="select-menu-item-text">
+                          <input type="radio" name="protocol_selector" value="ssh">
+                          <span class="select-menu-item-heading">
+                            SSH
+                            
+                          </span>
+                            <span class="description">
+                              Clone with an SSH key and passphrase from your GitHub settings.
+                            </span>
+                          <span class="js-select-button-text hidden-select-button-text">
+                            <div class="input-group-button">
+  <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone SSH, location:repo overview">
+    SSH
+  </button>
+</div>
+<input type="text" class="input-monospace input-mini js-zeroclipboard-target js-url-field" value="git@github.com:elastic/elasticsearch-js.git" readonly="">
+<div class="input-group-button">
+  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy "></span></button>
+</div>
+
+                          </span>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="select-menu-list" role="menu">
+                    <a class="select-menu-item select-menu-action" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank">
+                      <span class="select-menu-item-icon octicon octicon-question"></span>
+                      <div class="select-menu-item-text">
+                        Learn more about clone URLs
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+</form>        </div>
+
+        <div class="file-navigation-option">
+    <a href="github-mac://openRepo/https://github.com/elastic/elasticsearch-js" class="btn btn-sm tooltipped tooltipped-s tooltipped-multiline" aria-label="Save elastic/elasticsearch-js to your computer and use it in GitHub Desktop.">
+      <span class="octicon octicon-desktop-download "></span>
+    </a>
+</div>
+
+
+        <div class="file-navigation-option">
+          <a href="/elastic/elasticsearch-js/archive/master.zip" class="btn btn-sm" rel="nofollow" data-ga-click="Repository, download zip, location:repo overview">
+            Download ZIP
+          </a>
+        </div>
+      </div>
+  </div>
+
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w" title="master" type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax="" aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span aria-label="Close" class="octicon octicon-x js-menu-close" role="button"></span>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/1.4" data-name="1.4" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.4">
+                1.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/1.5" data-name="1.5" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.5">
+                1.5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/2.1" data-name="2.1" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="2.1">
+                2.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/2.2" data-name="2.2" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="2.2">
+                2.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/2.3" data-name="2.3" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="2.3">
+                2.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/2.4" data-name="2.4" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="2.4">
+                2.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/3.0" data-name="3.0" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="3.0">
+                3.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/3.1" data-name="3.1" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="3.1">
+                3.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/4.0" data-name="4.0" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.0">
+                4.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/9.0" data-name="9.0" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="9.0">
+                9.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/10.0" data-name="10.0" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="10.0">
+                10.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/dadoonet-patch-1" data-name="dadoonet-patch-1" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dadoonet-patch-1">
+                dadoonet-patch-1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/dadoonet-patch-2" data-name="dadoonet-patch-2" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dadoonet-patch-2">
+                dadoonet-patch-2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="/elastic/elasticsearch-js/tree/gh-pages" data-name="gh-pages" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="gh-pages">
+                gh-pages
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected" href="/elastic/elasticsearch-js/tree/master" data-name="master" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v10.0.1" data-name="v10.0.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v10.0.1">v10.0.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v10.0.0" data-name="v10.0.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v10.0.0">v10.0.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v9.0.2" data-name="v9.0.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v9.0.2">v9.0.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v9.0.1" data-name="v9.0.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v9.0.1">v9.0.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v8.2.0" data-name="v8.2.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v8.2.0">v8.2.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v8.1.0" data-name="v8.1.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v8.1.0">v8.1.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v8.0.1" data-name="v8.0.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v8.0.1">v8.0.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v8.0.0" data-name="v8.0.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v8.0.0">v8.0.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v6.0.0" data-name="v6.0.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v6.0.0">v6.0.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v5.0.0" data-name="v5.0.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v5.0.0">v5.0.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v4.1.0" data-name="v4.1.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v4.1.0">v4.1.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v4.0.2" data-name="v4.0.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v4.0.2">v4.0.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v4.0.0" data-name="v4.0.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v4.0.0">v4.0.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v3.1.3" data-name="v3.1.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.1.3">v3.1.3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v3.1.2" data-name="v3.1.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.1.2">v3.1.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v3.1.1" data-name="v3.1.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.1.1">v3.1.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v3.1.0" data-name="v3.1.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.1.0">v3.1.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v3.0.2" data-name="v3.0.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.0.2">v3.0.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/elastic/elasticsearch-js/tree/v3.0.1" data-name="v3.0.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.0.1">v3.0.1</a>
+            </div>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <a href="/elastic/elasticsearch-js/pull/new/master" class="btn btn-sm btn-primary" data-pjax="" data-ga-click="Repository, new pull request, location:repo overview">
+      New pull request
+    </a>
+
+  <div class="breadcrumb">
+    
+  </div>
+</div>
+
+
+
+
+  <div class="commit-tease js-details-container">
+    <span class="right">
+      Latest commit
+      <a class="commit-tease-sha" href="/elastic/elasticsearch-js/commit/f140745527df296fc5d8ea27fc2e8d757179bec4" data-pjax="">
+        f140745
+      </a>
+      <time datetime="2015-12-31T01:12:07Z" is="relative-time" title="30 de dez de 2015 23:12 BRST">4 days ago</time>
+    </span>
+
+
+    <span class="commit-author-section">
+      <img alt="@spalger" class="avatar" height="20" src="https://avatars3.githubusercontent.com/u/1329312?v=3&amp;s=40" width="20">
+      <a href="/spalger" class="user-mention" rel="contributor">spalger</a>
+    </span>
+
+        <a href="/elastic/elasticsearch-js/commit/f140745527df296fc5d8ea27fc2e8d757179bec4" class="message" data-pjax="true" title="fix recursive value replacement
+
+The recursive search for $vars was naively using `typeof` to determing if something is an object, which of course failes on `null`...">fix recursive value replacement</a>
+          <span class="hidden-text-expander inline">
+            <a href="#" class="js-details-target">…</a>
+          </span>
+    
+
+      <div class="commit-desc"><pre class="text-small">The recursive search for $vars was naively using `typeof` to determing if something is an object, which of course failes on `null`...</pre></div>
+  </div>
+
+
+<div class="file-wrap ">
+
+  <a href="/elastic/elasticsearch-js/tree/f140745527df296fc5d8ea27fc2e8d757179bec4" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files js-navigation-container js-active-navigation-container" data-pjax="">
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><span class="octicon octicon-alert "></span></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item navigation-focus">
+          <td class="icon">
+            <span class="octicon octicon-file-directory "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/tree/master/bower_components" class="js-directory-link js-navigation-open" id="19a7b8e431952dc70f90244955a0741b-8880b8f67d5397e159f82ec7d205591c4b25a84a" title="bower_components">bower_components</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/a1ab46188bbbe7bc6db2434c58c12aef954e53f4" class="message" data-pjax="true" title="added angular and angular-mocks as bower_components, jquery as npm dep">added angular and angular-mocks as bower_components, jquery as npm dep</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-09-25T00:56:39Z" is="time-ago" title="24 de set de 2014 21:56 BRT">a year ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/tree/master/docs" class="js-directory-link js-navigation-open" id="e3e2a9bfd88566b05001b02a3f51d286-ec1655bb1a4b030bb00e2196f5f9a76ce0eb77fc" title="docs">docs</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/4d77b2b022a9016c3a3e3488a571434ae96b9474" class="message" data-pjax="true" title="update apis">update apis</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-12-30T21:53:42Z" is="time-ago" title="30 de dez de 2015 19:53 BRST">4 days ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/tree/master/grunt" class="js-directory-link js-navigation-open" id="ab950343e97df05f1262e24666111fb6-eb49bdeded60545debf34a57c41413ec031d4c1f" title="grunt">grunt</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/fdd9803aac2ea6320948538c5571fae22c0619b0" class="message" data-pjax="true" title="remove bluebird from client, use ES6 promise instead">remove bluebird from client, use ES6 promise instead</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-24T21:14:15Z" is="time-ago" title="24 de nov de 2015 19:14 BRST">a month ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/tree/master/scripts" class="js-directory-link js-navigation-open" id="d6c5855a62cf32a4dadbc2831f0f295f-d73ee35ded5e0d58e8d80fe0d14b994ca65ab470" title="scripts">scripts</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/ddd9aaa6f895fa7464f9026691e02c6c5a709c5e" class="message" data-pjax="true" title="mention using bluebird in the docs and changelog">mention using bluebird in the docs and changelog</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-24T21:32:39Z" is="time-ago" title="24 de nov de 2015 19:32 BRST">a month ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/tree/master/src" class="js-directory-link js-navigation-open" id="25d902c24283ab8cfbac54dfa101ad31-6c323018c702d97210a1f98cf2fc0a604e3cf6ca" title="src">src</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/4d77b2b022a9016c3a3e3488a571434ae96b9474" class="message" data-pjax="true" title="update apis">update apis</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-12-30T21:53:42Z" is="time-ago" title="30 de dez de 2015 19:53 BRST">4 days ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/tree/master/test" class="js-directory-link js-navigation-open" id="098f6bcd4621d373cade4e832627b4f6-bc61f67f9cb65af441da8d321c70948a1e3f944c" title="test">test</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/f140745527df296fc5d8ea27fc2e8d757179bec4" class="message" data-pjax="true" title="fix recursive value replacement
+
+The recursive search for $vars was naively using `typeof` to determing if something is an object, which of course failes on `null`...">fix recursive value replacement</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-12-31T01:12:07Z" is="time-ago" title="30 de dez de 2015 23:12 BRST">4 days ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/blob/master/.gitignore" class="js-directory-link js-navigation-open" id="a084b794bc0759e7a6b77810e01874f2-24aafb2e479bc2f10f3f6a69dbec828a592e5a19" title=".gitignore">.gitignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/b5a9aefad150dfa7ad8fa4ed0d7ad3891b8c949a" class="message" data-pjax="true" title="add caching to travis builds">add caching to travis builds</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-08-04T10:54:20Z" is="time-ago" title="4 de ago de 2015 07:54 BRT">5 months ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/blob/master/.jshintrc" class="js-directory-link js-navigation-open" id="4d5aa81bf4f18104bb6ea53a8b5d1f43-f81a2de43567c91e0ac75581bf05ec6443109be0" title=".jshintrc">.jshintrc</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/83ecd4914cf8cefee684bda79a8743452acd0fc5" class="message" data-pjax="true" title="added version upgrade task">added version upgrade task</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-07-23T15:28:54Z" is="time-ago" title="23 de jul de 2014 12:28 BRT">2 years ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/blob/master/.npmignore" class="js-directory-link js-navigation-open" id="0fd4ef892d9d4990033701887c2f9bcc-19062e42f191d279bda068cacc6e73b673c5b741" title=".npmignore">.npmignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/b5a9aefad150dfa7ad8fa4ed0d7ad3891b8c949a" class="message" data-pjax="true" title="add caching to travis builds">add caching to travis builds</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-08-04T10:54:20Z" is="time-ago" title="4 de ago de 2015 07:54 BRT">5 months ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/blob/master/.travis.yml" class="js-directory-link js-navigation-open" id="354f30a63fb0907d4ad57269548329e3-33e426ed4b545e7ec15cfce4476b9f7095d30fb6" title=".travis.yml">.travis.yml</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/6e0d273d75201306a493de8471f9814625f5dc4c" class="message" data-pjax="true" title="support node 4">support node 4</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-09-09T01:02:13Z" is="time-ago" title="8 de set de 2015 22:02 BRT">4 months ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/blob/master/CHANGELOG.md" class="js-directory-link js-navigation-open" id="4ac32a78649ca5bdd8e0ba38b7006a1e-fd989addf5c7a5d10a29aedd42b6230298a98c19" title="CHANGELOG.md">CHANGELOG.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/ddd9aaa6f895fa7464f9026691e02c6c5a709c5e" class="message" data-pjax="true" title="mention using bluebird in the docs and changelog">mention using bluebird in the docs and changelog</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-24T21:32:39Z" is="time-ago" title="24 de nov de 2015 19:32 BRST">a month ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/blob/master/CONTRIBUTING.md" class="js-directory-link js-navigation-open" id="6a3371457528722a734f3c51d9238c13-9d604eccc158c2cd85c262a4bf5a1361c070865e" title="CONTRIBUTING.md">CONTRIBUTING.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/35bf77bae54ac5304a4963d2c4100ae42749f568" class="message" data-pjax="true" title="updated urls pointing to old elasticsearch org and elasticsearch.org">updated urls pointing to old elasticsearch org and elasticsearch.org</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-03-17T16:57:11Z" is="time-ago" title="17 de mar de 2015 13:57 BRT">10 months ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/blob/master/Gruntfile.js" class="js-directory-link js-navigation-open" id="35b4a816e0441e6a375cd925af50752c-52c1ef8ad8398923430f06d196d307ccb63767ba" title="Gruntfile.js">Gruntfile.js</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/8530ebb48b4c0bbcb5a06d8ab6b6a31fdac19a7c" class="message" data-pjax="true" title="Fixed the bower release process">Fixed the bower release process</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-02-06T21:55:28Z" is="time-ago" title="6 de fev de 2014 19:55 BRST">2 years ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/blob/master/LICENSE" class="js-directory-link js-navigation-open" id="9879d6db96fd29134fc802214163b95a-eff6178184fdad69ae50698a5516d277d2289975" title="LICENSE">LICENSE</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/345ac776ef3721977b545ee0b2a398c917f25869" class="message" data-pjax="true" title="Major updates for testing and grunt, jenkins tests are now powered by the jenkins.sh script in the scripts directory.">Major updates for testing and grunt, jenkins tests are now powered by…</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2013-12-12T22:39:42Z" is="time-ago" title="12 de dez de 2013 20:39 BRST">2 years ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/blob/master/README.md" class="js-directory-link js-navigation-open" id="04c6e90faac2675aa89e2176d2eec7d8-a183d1ce7eff86255b86e053847984628bdf9fd3" title="README.md">README.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/a26773f8b9998e6c4a6de7e5cc5b533762be74f6" class="message" data-pjax="true" title="bump to 10.1.0-snapshot">bump to 10.1.0-snapshot</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-24T22:22:55Z" is="time-ago" title="24 de nov de 2015 20:22 BRST">a month ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text "></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/elastic/elasticsearch-js/blob/master/package.json" class="js-directory-link js-navigation-open" id="b9cfc7f2cdf78a7f4b91a753d10865a2-34cacd67d3431124c3f92caaeacd82bbfbee8555" title="package.json">package.json</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/elastic/elasticsearch-js/commit/54159e72e3a321df6b34450dab64b414cc779627" class="message" data-pjax="true" title="updated grunt-esvm">updated grunt-esvm</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-12-31T00:38:26Z" is="time-ago" title="30 de dez de 2015 22:38 BRST">4 days ago</time></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+  <div id="readme" class="boxed-group clearfix announce instapaper_body md">
+    <h3>
+      <span class="octicon octicon-book "></span>
+      README.md
+    </h3>
+
+      <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1><a id="user-content-elasticsearchjs-1010-snapshot" class="anchor" href="#elasticsearchjs-1010-snapshot" aria-hidden="true"><span class="octicon octicon-link"></span></a>elasticsearch.js 10.1.0-snapshot</h1>
+
+<p>The official low-level Elasticsearch client for Node.js and the browser.</p>
+
+<p><a href="https://travis-ci.org/elastic/elasticsearch-js?branch=master"><img src="https://camo.githubusercontent.com/465b7ea887aefbc117ce957bc97a960a503d66b2/687474703a2f2f696d672e736869656c64732e696f2f7472617669732f656c61737469632f656c61737469637365617263682d6a732f6d61737465722e7376673f7374796c653d666c61742d737175617265" alt="Build Status" data-canonical-src="http://img.shields.io/travis/elastic/elasticsearch-js/master.svg?style=flat-square" style="max-width:100%;"></a>
+<a href="https://coveralls.io/r/elastic/elasticsearch-js?branch=master"><img src="https://camo.githubusercontent.com/f3dd6e1a795734308154b45e1f4db2542ff313d3/687474703a2f2f696d672e736869656c64732e696f2f636f766572616c6c732f656c61737469632f656c61737469637365617263682d6a732f6d61737465722e7376673f7374796c653d666c61742d737175617265" alt="Coverage Status" data-canonical-src="http://img.shields.io/coveralls/elastic/elasticsearch-js/master.svg?style=flat-square" style="max-width:100%;"></a>
+<a href="https://david-dm.org/elastic/elasticsearch-js"><img src="https://camo.githubusercontent.com/0d6cece8bef708d77721cc1971e6e59fb56887fa/687474703a2f2f696d672e736869656c64732e696f2f64617669642f656c61737469632f656c61737469637365617263682d6a732e7376673f7374796c653d666c61742d737175617265" alt="Dependencies up to date" data-canonical-src="http://img.shields.io/david/elastic/elasticsearch-js.svg?style=flat-square" style="max-width:100%;"></a></p>
+
+<h2><a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>One-to-one mapping with REST API and the other official clients</li>
+<li>Generalized, pluggable architecture. See <a href="http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/extending_core_components.html">Extending Core Components</a></li>
+<li>Configurable, automatic discovery of cluster nodes</li>
+<li>Persistent, Keep-Alive connections</li>
+<li>Load balancing (with pluggable selection strategy) across all available nodes.</li>
+</ul>
+
+<h2><a id="user-content-use-in-nodejs" class="anchor" href="#use-in-nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use in Node.js</h2>
+
+<pre><code>npm install elasticsearch
+</code></pre>
+
+<p><a href="https://npmjs.org/package/elasticsearch"><img src="https://camo.githubusercontent.com/da6025c40c2042f6f72dac9c7a2d4892337f857f/68747470733a2f2f6e6f6465692e636f2f6e706d2f656c61737469637365617263682e706e673f646f776e6c6f6164733d74727565" alt="NPM Stats" data-canonical-src="https://nodei.co/npm/elasticsearch.png?downloads=true" style="max-width:100%;"></a></p>
+
+<h2><a id="user-content-use-in-the-browser" class="anchor" href="#use-in-the-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use in the Browser</h2>
+
+<p>Check out the <a href="http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/browser-builds.html">Browser Builds</a> doc page for help downloading and setting up the client for use in the browser.</p>
+
+<h2><a id="user-content-docs" class="anchor" href="#docs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Docs</h2>
+
+<ul>
+<li><a href="http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/quick-start.html">Quick Start</a></li>
+<li><a href="http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/browser-builds.html">Browser Builds</a></li>
+<li><a href="http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html">API</a></li>
+<li><a href="http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/configuration.html">Configuration</a></li>
+<li><a href="https://github.com/elastic/elasticsearch-js/blob/master/CONTRIBUTING.md">Development/Contributing</a></li>
+<li><a href="http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/extending_core_components.html">Extending Core Components</a></li>
+<li><a href="http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/logging.html">Logging</a></li>
+</ul>
+
+<h2><a id="user-content-questions" class="anchor" href="#questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions?</h2>
+
+<p>You can probably find help in the #elasticsearch-js or #kibana rooms on <a href="http://webchat.freenode.net/?channels=elasticsearch-js">freenode</a>.</p>
+
+<h2><a id="user-content-supported-elasticsearch-versions" class="anchor" href="#supported-elasticsearch-versions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Elasticsearch Versions</h2>
+
+<p><a href="http://build-eu-00.elasticsearch.org/job/es-js_nightly/"><img src="https://camo.githubusercontent.com/461bed11d6c13f320005891c31e0933ef20dd1e0/687474703a2f2f696d672e736869656c64732e696f2f62616467652f656c61737469637365617263682d302e39302d2d322e302d677265656e2e7376673f7374796c653d666c61742d737175617265" alt="Supporting Elasticsearch Version 0.90 to 2.0" data-canonical-src="http://img.shields.io/badge/elasticsearch-0.90--2.0-green.svg?style=flat-square" style="max-width:100%;"></a></p>
+
+<p>Elasticsearch.js provides support for, and is regularly tested against, Elasticsearch releases 0.90.12 and greater. We also test against the latest changes in several branches in the Elasticsearch repository. To tell the client which version of Elastisearch you are using, and therefore the API it should provide, set the <code>apiVersion</code> config param. <a href="http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/configuration.html#config-options">More info</a></p>
+
+<h2><a id="user-content-examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<p>Create a client instance</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> elasticsearch <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>elasticsearch<span class="pl-pds">'</span></span>);
+<span class="pl-k">var</span> client <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">elasticsearch.Client</span>({
+  host<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>localhost:9200<span class="pl-pds">'</span></span>,
+  log<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>trace<span class="pl-pds">'</span></span>
+});</pre></div>
+
+<p>Send a HEAD request to <code>/?hello=elasticsearch</code> and allow up to 1 second for it to complete.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">client</span>.<span class="pl-en">ping</span>({
+  <span class="pl-c">// ping usually has a 3000ms timeout</span>
+  requestTimeout<span class="pl-k">:</span> <span class="pl-c1">Infinity</span>,
+
+  <span class="pl-c">// undocumented params are appended to the query string</span>
+  hello<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>elasticsearch!<span class="pl-pds">"</span></span>
+}, <span class="pl-k">function</span> (<span class="pl-smi">error</span>) {
+  <span class="pl-k">if</span> (error) {
+    <span class="pl-en">console</span>.<span class="pl-en">trace</span>(<span class="pl-s"><span class="pl-pds">'</span>elasticsearch cluster is down!<span class="pl-pds">'</span></span>);
+  } <span class="pl-k">else</span> {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>All is well<span class="pl-pds">'</span></span>);
+  }
+});</pre></div>
+
+<p>Skip the callback to get a promise back</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">client</span>.<span class="pl-c1">search</span>({
+  q<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>pants<span class="pl-pds">'</span></span>
+}).<span class="pl-en">then</span>(<span class="pl-k">function</span> (<span class="pl-smi">body</span>) {
+  <span class="pl-k">var</span> hits <span class="pl-k">=</span> <span class="pl-smi">body</span>.<span class="pl-smi">hits</span>.<span class="pl-smi">hits</span>;
+}, <span class="pl-k">function</span> (<span class="pl-smi">error</span>) {
+  <span class="pl-en">console</span>.<span class="pl-en">trace</span>(<span class="pl-smi">error</span>.<span class="pl-smi">message</span>);
+});</pre></div>
+
+<p>Find tweets that have "elasticsearch" in their body field</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">client</span>.<span class="pl-c1">search</span>({
+  index<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>twitter<span class="pl-pds">'</span></span>,
+  type<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>tweets<span class="pl-pds">'</span></span>,
+  body<span class="pl-k">:</span> {
+    query<span class="pl-k">:</span> {
+      match<span class="pl-k">:</span> {
+        body<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>elasticsearch<span class="pl-pds">'</span></span>
+      }
+    }
+  }
+}).<span class="pl-en">then</span>(<span class="pl-k">function</span> (<span class="pl-smi">resp</span>) {
+    <span class="pl-k">var</span> hits <span class="pl-k">=</span> <span class="pl-smi">resp</span>.<span class="pl-smi">hits</span>.<span class="pl-smi">hits</span>;
+}, <span class="pl-k">function</span> (<span class="pl-smi">err</span>) {
+    <span class="pl-en">console</span>.<span class="pl-en">trace</span>(<span class="pl-smi">err</span>.<span class="pl-smi">message</span>);
+});</pre></div>
+
+<p>More examples and detailed information about each method are available <a href="http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html">here</a></p>
+
+<h2><a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This software is licensed under the Apache 2 license, quoted below.</p>
+
+<pre><code>Copyright (c) 2014 Elasticsearch &lt;http://www.elasticsearch.org&gt;
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+</article>
+  </div>
+
+
+  </div>
+  <div class="modal-backdrop"></div>
+</div>
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+        <li><a href="https://github.com/pricing" data-ga-click="Footer, go to pricing, text:pricing">Pricing</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github " title="GitHub "></span>
+</a>
+    <ul class="site-footer-links">
+      <li>© 2016 <span title="0.11915s from github-fe119-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <span class="octicon octicon-x"></span>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" integrity="sha256-7460qJ7p88i3YTMH/liaj1cFgX987ie+xRzl6WMjSr8=" src="https://assets-cdn.github.com/assets/frameworks-ef8eb4a89ee9f3c8b7613307fe589a8f5705817f7cee27bec51ce5e963234abf.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-S2uOfRHrt7zoUSbTtBMMgAQfKubV1u+JAajAw/fLgNI=" src="https://assets-cdn.github.com/assets/github-4b6b8e7d11ebb7bce85126d3b4130c80041f2ae6d5d6ef8901a8c0c3f7cb80d2.js"></script>
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <span class="octicon octicon-alert"></span>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+  
+
+
+    <div class="facebox" id="facebox" style="display:none;">       <div class="facebox-popup">         <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">         </div>         <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">           <span class="octicon octicon-remove-close"></span>         </button>       </div>     </div></body></html>
