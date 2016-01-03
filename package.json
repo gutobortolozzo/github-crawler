@@ -4,7 +4,7 @@
   "description": "crawler the web",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/ --recursive",
+    "test": "node_modules/.bin/mocha test/ --recursive",
     "start": "curl -XDELETE 'http://localhost:9200/github/' && node src/new_crawler/crawler.js"
   },
   "author": "Guto Bortolozzo <gutobortolozzo@gmail.com> (https://github.com/gutobortolozzo/)",
