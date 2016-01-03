@@ -1,6 +1,8 @@
 
 This project is a crawler for github projects and provide a mongo-database for sentiment and content expressed in a repo.
 
+[![Build Status](https://travis-ci.org/gutobortolozzo/github-crawler.svg)](https://travis-ci.org/gutobortolozzo/github-crawler)
+
 install:
 
  - npm install
