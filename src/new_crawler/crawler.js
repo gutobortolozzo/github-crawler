@@ -2,7 +2,7 @@ const Crawler = require("simplecrawler");
 const urlUtil = require('./url/urlUtil');
 const PageRepository = require('./pages/pageRepository');
 const calculateSentiment = require('./sentiment/sentiment');
-const tdidf = require('./tfidf/tfidf');
+const tfidf = require('./tfidf/tfidf');
 const cheerio = require('cheerio');
 const rank = require('./rank/rank');
 const stargazers = require('./stargazer/stargazer');
@@ -40,7 +40,7 @@ crawler.on("fetchcomplete", function(queueItem, responseBuffer, response){
     })
     .then(() => {
         var bodyContentAsText = $('body').text().toLowerCase().replace(/\s+/g, ' ');
-        var listOfFrequencies = tdidf(bodyContentAsText);
+        var listOfFrequencies = tfidf(bodyContentAsText);
 
         return pageRepository.setFrequency(parsedUrl.owner, parsedUrl.project, listOfFrequencies);
     })

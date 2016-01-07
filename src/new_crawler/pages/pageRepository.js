@@ -38,8 +38,8 @@ function PageRepository(){
                     visits      : 0,
                     sentiment   : 0,
                     frequencies : [],
-                    references  : 0,
-                    referenced  : 0,
+                    references  : [],
+                    referenced  : [],
                     stars       : 0,
                     forks       : 0,
                     watchers    : 0
@@ -175,6 +175,12 @@ function PageRepository(){
                     return getById(localProjectKey);
                 })
                 .then((data) => {
+                    const currentReferenced = data.hits.hits[0]._source.referenced;
+                    currentReferenced.push({
+                        owner   : owner,
+                        project : project
+                    });
+
                     return elastic.update({
                         consistency : 'one',
                         refresh : true,
@@ -184,7 +190,7 @@ function PageRepository(){
                         id: projectKey,
                         body : {
                             doc : {
-                                referenced : data.hits.hits[0]._source.referenced + 1
+                                referenced : currentReferenced
                             }
                         }
                     });
@@ -196,7 +202,9 @@ function PageRepository(){
             return getById(projectKey)
         })
         .then((data) => {
-            const references = data.hits.hits[0]._source.references + rankedReferences.length;
+            const currentReferences = data.hits.hits[0]._source.references;
+            const currentReferencesUpdated = currentReferences.concat(rankedReferences);
+
             return elastic.update({
                 consistency : 'one',
                 refresh : true,
@@ -206,7 +214,7 @@ function PageRepository(){
                 id: projectKey,
                 body : {
                     doc : {
-                        references : references
+                        references : currentReferencesUpdated
                     }
                 }
             });
