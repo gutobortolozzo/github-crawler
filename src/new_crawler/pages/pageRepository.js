@@ -140,13 +140,8 @@ function PageRepository(){
                         return [referenced.owner, referenced.project].join();
                     });
 
-                    const notWithMyself = _.without(uniq, _.findWhere(uniq, {
-                        owner   : data.hits.hits[0]._source.owner,
-                        project : data.hits.hits[0]._source.project
-                    }));
-
                     return updateProject(projectKey, {
-                        referenced : notWithMyself
+                        referenced : uniq
                     });
                 });
         });
@@ -163,10 +158,9 @@ function PageRepository(){
                 return [reference.owner, reference.project].join();
             });
 
-            const notWithMyself = _.without(uniq, _.findWhere(uniq, {
-                owner   : data.hits.hits[0]._source.owner,
-                project : data.hits.hits[0]._source.project
-            }));
+            const notWithMyself = uniq.filter((element) => {
+                return element.owner != owner && element.project != project
+            });
 
             return updateProject(projectKey, {
                 references : notWithMyself
