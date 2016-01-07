@@ -34,7 +34,7 @@ function PageRepository(){
                 id: projectKey,
                 body : {
                     owner       : owner,
-                    name        : project,
+                    project     : project,
                     visits      : 0,
                     sentiment   : 0,
                     frequencies : [],
@@ -142,7 +142,7 @@ function PageRepository(){
 
                     const notWithMyself = _.without(uniq, _.findWhere(uniq, {
                         owner   : data.hits.hits[0]._source.owner,
-                        project : data.hits.hits[0]._source.name
+                        project : data.hits.hits[0]._source.project
                     }));
 
                     return updateProject(projectKey, {
@@ -165,7 +165,7 @@ function PageRepository(){
 
             const notWithMyself = _.without(uniq, _.findWhere(uniq, {
                 owner   : data.hits.hits[0]._source.owner,
-                project : data.hits.hits[0]._source.name
+                project : data.hits.hits[0]._source.project
             }));
 
             return updateProject(projectKey, {
