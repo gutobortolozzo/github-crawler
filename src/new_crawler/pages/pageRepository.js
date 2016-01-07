@@ -126,10 +126,8 @@ function PageRepository(){
 
         var projectKey = generateKey(owner, project);
 
-        return getById(projectKey)
-        .then((data) => {
-            const promiseRanked = rankedReferences.map(function(ranked){
-                return self.addProject(ranked.owner, ranked.project)
+        const promiseRanked = rankedReferences.map(function(ranked){
+            return self.addProject(ranked.owner, ranked.project)
                 .then(() => {
                     var localProjectKey = generateKey(ranked.owner, ranked.project);
                     return getById(localProjectKey);
@@ -145,9 +143,9 @@ function PageRepository(){
                         referenced : currentReferenced
                     });
                 });
-            });
-            return Promise.all(promiseRanked);
-        })
+        });
+
+        return Promise.all(promiseRanked)
         .then(() => {
             return getById(projectKey)
         })
