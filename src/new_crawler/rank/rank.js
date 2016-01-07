@@ -16,7 +16,7 @@ function calculateRank(bodyContent, currentOwner, currentProject){
 
         if(!parsed.owner || !parsed.project) return false;
 
-        if(currentOwner == parsed.owner && currentProject == parsed.project)
+        if(currentOwner.toLowerCase() == parsed.owner && currentProject.toLowerCase() == parsed.project)
             return false;
 
         return !urlUtil.blacklisted(parsed.owner) && !urlUtil.blacklisted(parsed.project);

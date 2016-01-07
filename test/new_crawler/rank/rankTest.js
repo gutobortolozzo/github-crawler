@@ -26,6 +26,6 @@ describe('rank', function () {
     });
 
     it('extracted none referenced project since owner/project is the same', () => {
-        rank.calculateRank(content, "test", "test").length.should.be.eql(0);
+        rank.calculateRank(content, "Test", "test").length.should.be.eql(0);
     });
 });

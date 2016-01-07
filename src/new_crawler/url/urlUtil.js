@@ -5,18 +5,18 @@ function parse(url){
     var parsed = urlProcessor.parse(url);
 
     return {
-        owner    : owner(parsed.pathname),
-        project  : project(parsed.pathname),
+        owner    : owner(parsed.pathname).toLowerCase(),
+        project  : project(parsed.pathname).toLowerCase(),
         pathname : parsed.pathname
     }
 }
 
 function owner(path){
-    return path.split("/")[1];
+    return path.split("/")[1] || "";
 }
 
 function project(path){
-    return path.split("/")[2];
+    return path.split("/")[2] || "";
 }
 
 function fetchCondition(parsedURL) {

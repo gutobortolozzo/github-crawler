@@ -108,13 +108,10 @@ function PageRepository(){
 
         var projectKey = generateKey(owner, project);
 
-        return getById(projectKey)
-        .then((data) => {
-            return updateProject(projectKey, {
-                stars    : social.stars,
-                forks    : social.forks,
-                watchers : social.watchers
-            });
+        return updateProject(projectKey, {
+            stars    : social.stars,
+            forks    : social.forks,
+            watchers : social.watchers
         });
     };
 
@@ -139,8 +136,12 @@ function PageRepository(){
                         project : project
                     });
 
+                    const uniq = _.uniq(currentReferenced, (referenced) => {
+                        return [referenced.owner, referenced.project].join();
+                    });
+
                     return updateProject(projectKey, {
-                        referenced : currentReferenced
+                        referenced : uniq
                     });
                 });
         });
@@ -153,8 +154,12 @@ function PageRepository(){
             const currentReferences = data.hits.hits[0]._source.references;
             const currentReferencesUpdated = currentReferences.concat(rankedReferences);
 
+            const uniq = _.uniq(currentReferencesUpdated, (reference) => {
+                return [reference.owner, reference.project].join();
+            });
+
             return updateProject(projectKey, {
-                references : currentReferencesUpdated
+                references : uniq
             });
         })
     };
