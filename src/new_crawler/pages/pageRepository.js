@@ -56,18 +56,8 @@ function PageRepository(){
 
         return getById(projectKey)
         .then((data) => {
-            return elastic.update({
-                consistency : 'one',
-                refresh : true,
-                retryOnConflict: 3,
-                index: 'github',
-                type: 'pages',
-                id: projectKey,
-                body : {
-                    doc : {
-                        visits : data.hits.hits[0]._source.visits + 1
-                    }
-                }
+            return updateProject(projectKey, {
+                visits : data.hits.hits[0]._source.visits + 1
             });
         });
     };
@@ -82,18 +72,8 @@ function PageRepository(){
         .then((data) => {
             var sentiment = (data.hits.hits[0]._source.sentiment + sentimentIndex) / data.hits.hits[0]._source.visits;
 
-            return elastic.update({
-                consistency : 'one',
-                refresh : true,
-                retryOnConflict: 3,
-                index: 'github',
-                type: 'pages',
-                id: projectKey,
-                body : {
-                    doc : {
-                        sentiment : sentiment
-                    }
-                }
+            return updateProject(projectKey, {
+                sentiment : sentiment
             });
         });
     };
@@ -116,18 +96,8 @@ function PageRepository(){
                 return b.score - a.score;
             }).slice(0, 10);
 
-            return elastic.update({
-                consistency : 'one',
-                refresh : true,
-                retryOnConflict: 3,
-                index: 'github',
-                type: 'pages',
-                id: projectKey,
-                body : {
-                    doc : {
-                        frequencies : sortedFrequencies
-                    }
-                }
+            return updateProject(projectKey, {
+                frequencies : sortedFrequencies
             });
         });
     };
@@ -140,20 +110,10 @@ function PageRepository(){
 
         return getById(projectKey)
         .then((data) => {
-            return elastic.update({
-                consistency : 'one',
-                refresh : true,
-                retryOnConflict: 3,
-                index: 'github',
-                type: 'pages',
-                id: projectKey,
-                body : {
-                    doc : {
-                        stars    : social.stars,
-                        forks    : social.forks,
-                        watchers : social.watchers
-                    }
-                }
+            return updateProject(projectKey, {
+                stars    : social.stars,
+                forks    : social.forks,
+                watchers : social.watchers
             });
         });
     };
@@ -181,18 +141,8 @@ function PageRepository(){
                         project : project
                     });
 
-                    return elastic.update({
-                        consistency : 'one',
-                        refresh : true,
-                        retryOnConflict: 3,
-                        index: 'github',
-                        type: 'pages',
-                        id: projectKey,
-                        body : {
-                            doc : {
-                                referenced : currentReferenced
-                            }
-                        }
+                    return updateProject(projectKey, {
+                        referenced : currentReferenced
                     });
                 });
             });
@@ -205,18 +155,8 @@ function PageRepository(){
             const currentReferences = data.hits.hits[0]._source.references;
             const currentReferencesUpdated = currentReferences.concat(rankedReferences);
 
-            return elastic.update({
-                consistency : 'one',
-                refresh : true,
-                retryOnConflict: 3,
-                index: 'github',
-                type: 'pages',
-                id: projectKey,
-                body : {
-                    doc : {
-                        references : currentReferencesUpdated
-                    }
-                }
+            return updateProject(projectKey, {
+                references : currentReferencesUpdated
             });
         })
     };
@@ -226,15 +166,29 @@ function PageRepository(){
         console.log('##########', 'visited', visited, '##########');
     };
 
-    var generateKey = function(owner, project){
+    const generateKey = function(owner, project){
         return (owner+':'+project).toLowerCase();
     };
 
-    var isInvalid = function(owner, project){
+    const isInvalid = function(owner, project){
         return !owner || !project;
     };
 
-    var getById = function(projectKey) {
+    const updateProject = function(projectKey, partialDoc) {
+        return elastic.update({
+            consistency : 'one',
+            refresh : true,
+            retryOnConflict: 5,
+            index: 'github',
+            type: 'pages',
+            id: projectKey,
+            body : {
+                doc : partialDoc
+            }
+        });
+    };
+
+    const getById = function(projectKey) {
         return elastic.search({
             index: 'github',
             type: 'pages',
