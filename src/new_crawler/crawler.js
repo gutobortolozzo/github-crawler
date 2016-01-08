@@ -11,6 +11,7 @@ crawler          		= Crawler.crawl("https://github.com/NaturalNode/natural");
 crawler.maxDepth 		= 0;
 crawler.filterByDomain  = true; // restrict to github
 crawler.acceptCookies	= false;
+crawler.interval	    = 200;
 
 crawler.addFetchCondition(urlUtil.fetchCondition);
 
@@ -61,7 +62,7 @@ crawler.on("fetchcomplete", function(queueItem, responseBuffer, response){
         finishEvent();
     })
     .catch((error) => {
-        console.log(error);
+        console.log(error.stack);
         finishEvent();
     })
 });

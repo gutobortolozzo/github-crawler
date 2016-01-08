@@ -1,13 +1,13 @@
 const _ = require('underscore');
 const elasticsearch = require('elasticsearch');
+const pageModel = require(process.cwd()+'/src/new_crawler/pages/pageModel');
 
 "use strict"
 function PageRepository(){
     
-    const projects = new Map();
     var visited = 0;
 
-    var elastic = new elasticsearch.Client({
+    const elastic = new elasticsearch.Client({
         host        : 'localhost:9200',
         apiVersion  : '2.1'
     });
@@ -32,18 +32,7 @@ function PageRepository(){
                 index: 'github',
                 type: 'pages',
                 id: projectKey,
-                body : {
-                    owner       : owner,
-                    project     : project,
-                    visits      : 0,
-                    sentiment   : 0,
-                    frequencies : [],
-                    references  : [],
-                    referenced  : [],
-                    stars       : 0,
-                    forks       : 0,
-                    watchers    : 0
-                }
+                body : pageModel.newPage(owner, project)
             });
         });
     };
@@ -70,7 +59,8 @@ function PageRepository(){
 
         return getById(projectKey)
         .then((data) => {
-            var sentiment = (data.hits.hits[0]._source.sentiment + sentimentIndex) / data.hits.hits[0]._source.visits;
+            var source = data.hits.hits[0]._source;
+            const sentiment = pageModel.mergeSentiment(source.sentiment, sentimentIndex, source.visits);
 
             return updateProject(projectKey, {
                 sentiment : sentiment
@@ -86,15 +76,9 @@ function PageRepository(){
 
         return getById(projectKey)
         .then((data) => {
-            var frequencies = data.hits.hits[0]._source.frequencies.concat(listOfFrequencies);
+            const frequencies = data.hits.hits[0]._source.frequencies;
 
-            var uniqueList = _.uniq(frequencies, function(item){
-                return item.term;
-            });
-
-            const sortedFrequencies = uniqueList.sort(function(a, b){
-                return b.score - a.score;
-            }).slice(0, 10);
+            const sortedFrequencies = pageModel.mergeFrequencies(frequencies, listOfFrequencies)
 
             return updateProject(projectKey, {
                 frequencies : sortedFrequencies
@@ -131,17 +115,10 @@ function PageRepository(){
                 })
                 .then((data) => {
                     const currentReferenced = data.hits.hits[0]._source.referenced;
-                    currentReferenced.push({
-                        owner   : owner,
-                        project : project
-                    });
-
-                    const uniq = _.uniq(currentReferenced, (referenced) => {
-                        return [referenced.owner, referenced.project].join();
-                    });
+                    const referenced = pageModel.mergeReferenced(owner, project, currentReferenced);
 
                     return updateProject(projectKey, {
-                        referenced : uniq
+                        referenced : referenced
                     });
                 });
         });
@@ -153,17 +130,10 @@ function PageRepository(){
         .then((data) => {
             const currentReferences = data.hits.hits[0]._source.references;
             const currentReferencesUpdated = currentReferences.concat(rankedReferences);
-
-            const uniq = _.uniq(currentReferencesUpdated, (reference) => {
-                return [reference.owner, reference.project].join();
-            });
-
-            const notWithMyself = uniq.filter((element) => {
-                return element.owner != owner && element.project != project
-            });
+            const references = pageModel.mergeReferences(owner, project, currentReferencesUpdated);
 
             return updateProject(projectKey, {
-                references : notWithMyself
+                references : references
             });
         })
     };
